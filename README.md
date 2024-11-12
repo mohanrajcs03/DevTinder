@@ -1,12 +1,17 @@
 # ----------------- Commands ---------------------
   - npm init
   - npm i express
+  - npm install --> it will install all dependency in package.json
   Optional
   - npm install -g nodemon
   - Add "scripts":{"start":"node src/App.js", "dev":"nodemon src/App.js"}
+  Github repository 
   - git init
-  - npm install --> it will install all dependency in package.json
-  - 
+  - git add .
+  - git commit -m "message"
+  - git remote add origin https://github.com/mohanrajcs03/DevTinder.git
+  - git branch -M main
+  - git push -u origin main
 
 # ----------------- Summary ----------------------
   - reate a repository
@@ -19,6 +24,11 @@
   - What are dependencies
   - What is the use of "-g" while npm install is
   - Difference between caret and tilde (^ vs ~ )
+
+  - Order of the Routes matter a lot !
+  - Http methods
+  - Use [Postman]
+
 
 # -------------- Creating Server ---------------
   - Major.Minor.Patch (Version) [BackwardCompactable]

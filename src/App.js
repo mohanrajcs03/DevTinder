@@ -1,7 +1,13 @@
 const express = require("express");
 const app = express(); // creating Server
-app.use("/test",(req, res) => {
-  res.send("Hello");
-});
-app.use("/root", (req, res)=>res.send("You are in root"))
+// Only handle GET call to /user
+app.get("/user", (req, res)=>{
+    res.send({firstname: "Mohan", lastname: "Raj"})
+})
+app.post("/user", (req, res)=>{
+    res.send("Data saved")
+})
+app.delete("/user", (req, res)=>{
+    res.send("Data Deleted")
+})
 app.listen(3000, () => console.log("Server started @port:3000"));
