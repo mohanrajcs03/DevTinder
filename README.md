@@ -28,6 +28,9 @@
   - Order of the Routes matter a lot !
   - Http methods
   - Use [Postman]
+  - Explore Routing and use of ?, +, *, () in routes
+  - Reading Query params
+  - Reading Dynamic Routes
 
 
 # -------------- Creating Server ---------------
@@ -37,3 +40,11 @@
   - Request Handler (req, res)=>{}
   - res.send --> always respond this whatevere the req comes in
   - its anoying to stop and re-start the server use [Nodemon]
+
+# ------------------- Routing Regex ----------------
+  - ab?c   ---> b is Optional [(abc),(ac)]
+  - ab+c   ---> b can be multiple but at least once [(abc),(abbc)]
+  - ab*cd  ---> ab[writeAnything]cd  [(abWriteAnythingHerecd)]
+  - a(bc)? ---> bc is Optional
+  - (/a/)  ---> query contains a will work [car,a,hat,bat,ate,bca]
+  - (/.*fly$/)  anything from start but ends with fly [butterfly,fly]
