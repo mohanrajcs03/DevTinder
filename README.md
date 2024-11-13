@@ -2,6 +2,7 @@
   - npm init
   - npm i express
   - npm install --> it will install all dependency in package.json
+  - npm i mongoose
   Optional
   - npm install -g nodemon
   - Add "scripts":{"start":"node src/App.js", "dev":"nodemon src/App.js"}
@@ -35,6 +36,8 @@
   - a single route handler is responsible to send single res otherwise error
   - Middleware
   - router handlers
+  - Why we should connect database before starting a server ?
+  - Schema vs  Model
 
 
 # -------------- Creating Server ---------------
@@ -59,4 +62,14 @@
   - Reading Dynamic Routes --> ["/abc/:userId/:name/:pass] [req.params]
   - Middleware -->
   - router handlers --> handles the req, res and actually sends res to client
+  - Error Handling
+  - throw new Error("Error @/admin/getUserData"); in [TryBlock]
+  - res.status(500).send("err.message"); in [CatchBlock]
+
+# ----------- Started With DataBase MongoDB --------
+  - first connecto to Database then server can listern
+  - refrencing to a model starts with capital Letter
+  - model vs Schema
+  - Clusters --> Database --> Collections --> Documents --> Fields
+  - Add instance to our Model
   - 
