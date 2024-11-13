@@ -31,15 +31,20 @@
   - Explore Routing and use of ?, +, *, () in routes
   - Reading Query params
   - Reading Dynamic Routes
+  - app.use | app.all | app.send | next() --> (req, res, next)
+  - a single route handler is responsible to send single res otherwise error
+  - Middleware
+  - router handlers
 
 
 # -------------- Creating Server ---------------
   - Major.Minor.Patch (Version) [BackwardCompactable]
   - ^ caret (patch, minor change update) ~ tilt ()
   - create express App 
-  - Request Handler (req, res)=>{}
+  - Request Handler (req, res)=>{} [RouteHandler]
   - res.send --> always respond this whatevere the req comes in
   - its anoying to stop and re-start the server use [Nodemon]
+  - const app = express(); // creating Server
 
 # ------------------- Routing Regex ----------------
   - ab?c   ---> b is Optional [(abc),(ac)]
@@ -48,3 +53,10 @@
   - a(bc)? ---> bc is Optional
   - (/a/)  ---> query contains a will work [car,a,hat,bat,ate,bca]
   - (/.*fly$/)  anything from start but ends with fly [butterfly,fly]
+
+# --------------   Routing & Middleware  ----------
+  - Reading Query params --> [abc?userId=101&password=Testing] [req.query]
+  - Reading Dynamic Routes --> ["/abc/:userId/:name/:pass] [req.params]
+  - Middleware -->
+  - router handlers --> handles the req, res and actually sends res to client
+  - 
