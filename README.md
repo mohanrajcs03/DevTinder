@@ -38,6 +38,7 @@
   - router handlers
   - Why we should connect database before starting a server ?
   - Schema vs  Model
+  - JS Object vs JSON
 
 
 # -------------- Creating Server ---------------
@@ -72,4 +73,8 @@
   - model vs Schema
   - Clusters --> Database --> Collections --> Documents --> Fields
   - Add instance to our Model
-  - 
+  - When we add JSON object in body Header [Postman] the data sent
+    in the form of streams we cannot able to read in our req in 
+    our app as req.body for this express provides middilware to use
+    [express.json()] it will read Json and convert into JS object and
+    to our request
